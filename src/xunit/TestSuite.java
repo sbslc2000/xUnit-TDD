@@ -10,7 +10,7 @@ public class TestSuite implements Test {
 
     public TestSuite(Class<? extends Test> testClass) {
         Arrays.stream(testClass.getDeclaredMethods())
-                .filter(m -> m.getName().startsWith("test"))
+                .filter(m -> m.isAnnotationPresent(src.xunit.annotation.Test.class))
                 .forEach(m -> {
                             try {
                                 add(testClass.getConstructor(String.class).newInstance(m.getName()));
