@@ -34,6 +34,7 @@ public class TestCaseTest extends TestCase {
     public void testSetUp() {
         Assert.assertEquals(false, wasRun.wasSetUp);
         wasRun.run();
+        Assert.assertEquals("setUp", wasRun.log);
         Assert.assertEquals(true, wasRun.wasSetUp);
     }
 }
