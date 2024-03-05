@@ -11,6 +11,7 @@ public class TestCase {
     protected final String name;
 
     /**
+     * 테스트 대상 메서드 이름을 받는다.
      *
      * @param name
      */
