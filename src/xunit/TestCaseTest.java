@@ -11,6 +11,16 @@ public class TestCaseTest extends TestCase {
         super(name);
     }
 
+    public static TestSuite suite() {
+        TestSuite suite = new TestSuite();
+        suite.add(new TestCaseTest("testTemplateMethod"));
+        suite.add(new TestCaseTest("testResult"));
+        suite.add(new TestCaseTest("testFailedResultFormatting"));
+        suite.add(new TestCaseTest("testFailedResult"));
+        suite.add(new TestCaseTest("testSuite"));
+        return suite;
+    }
+
     /**
      * 테스트케이스를 상속한 클래스의 run이 정상적으로 수행되어야 한다.
      */
@@ -23,7 +33,6 @@ public class TestCaseTest extends TestCase {
 
     public void testResult() {
         WasRun wasRun = new WasRun("testMethod");
-
         TestResult result = new TestResult();
         wasRun.run(result);
         Assert.assertEquals("1 run, 0 failed", result.getSummary());
