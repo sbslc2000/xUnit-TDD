@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
  * 일반화된 테스트케이스는 이 클래스를 상속해야 한다.
  * 생성자에 이름을 넣고 run을 호출하면 테스트 메서드를 실행한다.
  */
-public class TestCase {
+public class TestCase implements Test {
     protected final String name;
 
     /**
