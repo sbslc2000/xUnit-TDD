@@ -10,4 +10,7 @@ public class TestResult {
     public String getSummary() {
         return runCount + " run, 0 failed";
     }
+
+    public void testFailed() {
+    }
 }
