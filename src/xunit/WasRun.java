@@ -11,10 +11,12 @@ public class WasRun extends TestCase {
 
     public void testMethod() {
         wasRun = true;
+        log += " testMethod";
     }
 
     @Override
     public void setUp() {
         wasSetUp = true;
+        log = "setUp";
     }
 }
