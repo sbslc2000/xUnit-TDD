@@ -19,7 +19,7 @@ public class TestCase {
         this.name = name;
     }
 
-    public void run() {
+    public TestResult run() {
         //테스트 메서드 호출 전에 setUp이 호출되어야 한다.
         setUp();
 
@@ -31,6 +31,7 @@ public class TestCase {
         }
 
         tearDown();
+        return new TestResult();
     }
 
     public void tearDown() {
