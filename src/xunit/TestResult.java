@@ -2,15 +2,18 @@ package src.xunit;
 
 public class TestResult {
     int runCount = 0;
+    int errorCount;
 
     public void testStarted() {
         runCount++;
     }
 
-    public String getSummary() {
-        return runCount + " run, 0 failed";
+    public void testFailed() {
+        errorCount++;
     }
 
-    public void testFailed() {
+    public String getSummary() {
+        return runCount + " run, " + errorCount + " failed";
     }
+    
 }
